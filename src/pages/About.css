@@ -12,40 +12,62 @@
 .about__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px 40px;
+  padding: 60px 40px 80px;
 }
 
-.about__header {
-  margin-bottom: 40px;
+/* Two-column layout */
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+/* Left column: image + name */
+.about__image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__image {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
 }
 
 .about__name {
-  font-family: var(--font-heading);
-  font-size: 42px;
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 400;
-  color: var(--text-heading);
+  color: var(--text-body);
+  text-align: center;
+  margin-top: 16px;
 }
 
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  margin-bottom: 60px;
+/* Right column: title + text + button */
+.about__text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .about__section-title {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 44px;
   font-weight: 400;
   color: var(--text-heading);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about__body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 32px;
 }
 
 .about__body p {
@@ -56,68 +78,44 @@
   line-height: 1.75;
 }
 
-.about__cta-text {
-  font-weight: 500 !important;
-  color: var(--text-heading) !important;
-  margin-top: 8px;
+.about__body strong {
+  font-weight: 700;
+  color: var(--text-heading);
 }
 
-.about__image-section {
-  display: flex;
-  justify-content: center;
-}
-
-.about__image {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
-.about__links {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
-}
-
+/* Outlined pill button (shared by Resume & LinkedIn) */
 .about__button {
   display: inline-block;
   font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
-  background: var(--text-heading);
+  color: var(--text-heading);
+  background: transparent;
   padding: 12px 32px;
   border-radius: 50px;
-  transition: all 0.25s ease;
+  border: 1.5px solid var(--text-heading);
+  transition: background 0.25s ease, color 0.25s ease;
   text-decoration: none;
 }
 
 .about__button:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(145, 117, 80, 0.25);
+  background: var(--text-heading);
+  color: var(--bg-primary);
 }
 
-.about__button--linkedin {
-  background: #0077b5;
-}
-
-.about__button--linkedin:hover {
-  background: #005f8d;
-  box-shadow: 0 4px 16px rgba(0, 119, 181, 0.25);
-}
-
+/* Centered connect section */
 .about__connect {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0 20px;
+  gap: 16px;
 }
 
 .about__connect-title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 44px;
   font-weight: 400;
   color: var(--text-heading);
 }
@@ -127,6 +125,7 @@
   font-size: 16px;
   color: var(--text-body);
   line-height: 1.6;
+  max-width: 500px;
 }
 
 /* Responsive */
@@ -136,25 +135,29 @@
     gap: 40px;
   }
 
-  .about__image-section {
-    order: -1;
+  .about__section-title {
+    font-size: 32px;
+  }
+
+  .about__connect-title {
+    font-size: 32px;
   }
 }
 
 @media (max-width: 600px) {
   .about__container {
-    padding: 40px 20px 30px;
-  }
-
-  .about__name {
-    font-size: 32px;
+    padding: 40px 20px 60px;
   }
 
   .about__section-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .about__body p {
     font-size: 15px;
+  }
+
+  .about__connect-title {
+    font-size: 26px;
   }
 }
