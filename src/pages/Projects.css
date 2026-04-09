@@ -90,22 +90,21 @@
   display: inline-block;
   width: fit-content;
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  color: #fff;
-  background: var(--text-heading);
-  padding: 12px 28px;
+  color: var(--text-heading);
+  background: transparent;
+  padding: 12px 32px;
   border-radius: 50px;
-  border: none;
+  border: 1.5px solid var(--text-heading);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease;
   margin-top: 8px;
 }
 
 .project-detail__button:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(145, 117, 80, 0.25);
+  background: var(--text-heading);
+  color: var(--bg-primary);
 }
 
 /* Gallery */
