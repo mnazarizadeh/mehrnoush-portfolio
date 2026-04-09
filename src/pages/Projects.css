@@ -36,9 +36,34 @@
 }
 
 .project-detail__header {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.project-detail__image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.project-detail__thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-detail__image-wrapper:hover .project-detail__thumbnail {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .project-detail__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 .project-detail__info {
