@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Projects.css';
 
 const LOCALINK_IMG_1 = 'https://uxfolio-prod.s3.us-east-1.amazonaws.com/67a11ba89d5a5b2b9f1c9ec1/687fb213c22e974568d74e0b/vjpZCTBGZNG9mLSY.webp';
@@ -35,6 +35,7 @@ function Projects() {
   const [visible, setVisible] = useState(false);
   const [expandedProject, setExpandedProject] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setVisible(true);
@@ -76,7 +77,11 @@ function Projects() {
                   </p>
                   <button
                     className="project-detail__button"
-                    onClick={() => toggleProject(project.id)}
+                    onClick={() =>
+                      project.id === 'localink'
+                        ? navigate('/projects/localink')
+                        : toggleProject(project.id)
+                    }
                   >
                     {expandedProject === project.id
                       ? 'Close Case Study'
