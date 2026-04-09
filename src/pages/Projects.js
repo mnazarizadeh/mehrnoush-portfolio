@@ -62,6 +62,13 @@ function Projects() {
           {projects.map((project) => (
             <div key={project.id} id={project.id} className="project-detail">
               <div className="project-detail__header">
+                <div className="project-detail__image-wrapper">
+                  <img
+                    src={project.thumbnail}
+                    alt={`${project.title} thumbnail`}
+                    className="project-detail__thumbnail"
+                  />
+                </div>
                 <div className="project-detail__info">
                   <h2 className="project-detail__title">{project.title}</h2>
                   <p className="project-detail__description">
