@@ -1,4 +1,6 @@
-/* ── Page fade-in ── */
+/* ══════════════════════════════════════════
+   Page fade-in
+══════════════════════════════════════════ */
 .localink {
   opacity: 0;
   transform: translateY(12px);
@@ -9,60 +11,83 @@
   transform: translateY(0);
 }
 
-/* ── Hero ── */
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
 .localink__hero {
-  background: #3d1a3d;
+  background: #4a1040;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
-  padding: 60px 80px;
-  min-height: 340px;
+  padding: 70px 80px;
+  min-height: 360px;
+  overflow: hidden;
 }
 
-.localink__hero-text {
-  color: #fff;
-}
+.localink__hero-text { color: #fff; }
 
 .localink__hero-title {
   font-family: var(--font-heading);
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  line-height: 1.05;
+  margin-bottom: 14px;
 }
 
 .localink__hero-sub {
   font-family: var(--font-body);
   font-size: 18px;
   font-weight: 400;
-  opacity: 0.85;
+  opacity: 0.82;
   line-height: 1.6;
 }
 
-.localink__hero-image img {
-  width: 100%;
-  max-width: 520px;
-  display: block;
-  margin: 0 auto;
+/* two overlapping images in the hero */
+.localink__hero-images {
+  position: relative;
+  height: 320px;
 }
 
-/* ── Info Bar ── */
+.localink__hero-img {
+  position: absolute;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.localink__hero-img--back {
+  width: 72%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.localink__hero-img--front {
+  width: 44%;
+  bottom: 0;
+  left: 4%;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+/* ══════════════════════════════════════════
+   INFO BAR
+══════════════════════════════════════════ */
 .localink__info-bar {
-  background: #2a102a;
+  background: #2e0e2e;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 32px 80px;
+  padding: 28px 80px;
   gap: 24px;
 }
 
 .localink__info-col h3 {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: #c68fc6;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   margin-bottom: 10px;
 }
 
@@ -74,69 +99,69 @@
 
 .localink__info-col ul li {
   font-family: var(--font-body);
-  font-size: 14px;
-  color: #eddeed;
-  line-height: 1.8;
+  font-size: 13px;
+  color: #e8d4e8;
+  line-height: 1.9;
 }
 
-/* ── Main content wrapper ── */
+/* ══════════════════════════════════════════
+   MAIN CONTENT WRAPPER
+══════════════════════════════════════════ */
 .localink__content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 40px 80px;
+  padding: 64px 40px 80px;
 }
 
-/* ── Generic section ── */
+/* ══════════════════════════════════════════
+   GENERIC SECTION
+══════════════════════════════════════════ */
 .localink__section {
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .localink__section h2 {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 400;
   color: var(--text-heading);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .localink__section h3 {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--text-heading);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .localink__section h4 {
   font-family: var(--font-heading);
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text-heading);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .localink__section p {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-body);
-  line-height: 1.8;
-  margin-bottom: 12px;
+  line-height: 1.85;
+  margin-bottom: 10px;
 }
 
-.localink__section strong {
-  color: var(--text-heading);
-}
+.localink__section strong { color: var(--text-heading); }
 
-/* ── About (2-col) ── */
+/* ══════════════════════════════════════════
+   ABOUT (2-col)
+══════════════════════════════════════════ */
 .localink__about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 52px;
   align-items: center;
-}
-
-.localink__about-text h2 {
-  margin-bottom: 16px;
 }
 
 .localink__about-image img {
@@ -144,30 +169,38 @@
   border-radius: 12px;
 }
 
-/* ── Showcase header ── */
-.localink__showcase-header {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.localink__showcase-header h2 {
-  font-size: 40px;
-}
-
-/* ── Task (2-col) ── */
-.localink__task {
+/* ══════════════════════════════════════════
+   BUSINESS GOALS + SHOWCASE (2-col)
+══════════════════════════════════════════ */
+.localink__goals-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 52px;
   align-items: center;
 }
 
-.localink__task--reverse {
-  direction: rtl;
+.localink__goals-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.localink__task--reverse > * {
-  direction: ltr;
+.localink__showcase-label {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--text-heading);
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   TASK (Desktop / Mobile) – 2-col
+══════════════════════════════════════════ */
+.localink__task {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
 }
 
 .localink__task-image img {
@@ -175,10 +208,39 @@
   border-radius: 12px;
 }
 
-/* ── Process ── */
+.localink__task-image--phone img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Download Prototype button */
+.localink__download-btn {
+  margin-top: 18px;
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a1040;
+  background: transparent;
+  padding: 10px 28px;
+  border-radius: 50px;
+  border: 1.5px solid #4a1040;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.localink__download-btn:hover {
+  background: #4a1040;
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════
+   PROCESS
+══════════════════════════════════════════ */
 .localink__process-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .localink__process-header h2 {
@@ -186,31 +248,30 @@
   font-size: 40px;
   font-weight: 400;
   color: var(--text-heading);
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .localink__process-steps {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
 }
 
 .localink__process-step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .localink__step-num {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: #3d1a3d;
+  background: #4a1040;
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -219,23 +280,27 @@
 
 .localink__step-label {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-heading);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .localink__process-line {
   flex: 1;
   height: 2px;
-  background: #3d1a3d;
-  min-width: 60px;
+  background: #4a1040;
+  min-width: 70px;
   margin-bottom: 24px;
+  opacity: 0.4;
 }
 
-/* ── Phase Divider ── */
+/* ══════════════════════════════════════════
+   PHASE DIVIDER  (Discover / Define / etc.)
+══════════════════════════════════════════ */
 .localink__phase-divider {
   text-align: center;
-  margin: 20px 0 48px;
+  margin: 16px 0 52px;
   position: relative;
 }
 
@@ -246,114 +311,124 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: #3d1a3d;
-  opacity: 0.2;
+  background: #4a1040;
+  opacity: 0.18;
 }
 
 .localink__phase-divider span {
   position: relative;
   font-family: var(--font-heading);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 400;
   color: var(--text-heading);
   background: var(--bg-primary);
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
-/* ── Comparison table ── */
-.localink__comparison-table {
-  margin-top: 20px;
-  border-radius: 12px;
+/* ══════════════════════════════════════════
+   COMPETITIVE ANALYSIS – cards
+══════════════════════════════════════════ */
+.localink__comp-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.localink__comp-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.localink__comp-card {
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid #e0ddd5;
 }
 
-.localink__comparison-header,
-.localink__comparison-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 0;
+.localink__comp-card--highlight .localink__comp-card-header {
+  background: #4a1040;
 }
 
-.localink__comparison-header {
-  background: #3d1a3d;
+.localink__comp-card-header {
+  background: #2e0e2e;
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.localink__comparison-header span,
-.localink__comparison-row span {
-  padding: 12px 16px;
-  font-family: var(--font-body);
-  font-size: 14px;
-}
-
-.localink__comparison-row {
-  border-top: 1px solid #e0ddd5;
-}
-
-.localink__comparison-row:nth-child(even) {
-  background: #faf9f4;
-}
-
-.localink__comparison-row span:first-child {
-  color: var(--text-heading);
-  font-weight: 500;
-}
-
-.localink__comparison-row span:not(:first-child) {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 12px;
   text-align: center;
-  color: var(--text-body);
 }
 
-/* ── Key Findings bars ── */
-.localink__findings {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.localink__comp-card-list {
+  list-style: none;
+  padding: 12px;
+  margin: 0;
+  background: #faf8f6;
+}
+
+.localink__comp-card-list li {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-body);
+  line-height: 1.9;
+  border-bottom: 1px solid #eee;
+  padding: 3px 0;
+}
+
+.localink__comp-card-list li:last-child { border-bottom: none; }
+
+/* ══════════════════════════════════════════
+   KEY FINDINGS – amber bars
+══════════════════════════════════════════ */
+.localink__findings-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
 }
 
 .localink__finding-row {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
+  display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .localink__finding-label {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-heading);
+  min-width: 200px;
 }
 
 .localink__finding-bar-track {
-  width: 260px;
+  flex: 1;
   height: 10px;
-  background: #e8e5de;
+  background: #f0ece3;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .localink__finding-bar {
   height: 100%;
-  background: #6b2d6b;
+  background: #c8941a;   /* amber / gold — matches screenshot */
   border-radius: 5px;
-  transition: width 0.6s ease;
 }
 
 .localink__finding-pct {
   font-family: var(--font-heading);
-  font-size: 14px;
-  color: #6b2d6b;
-  font-weight: 600;
-  width: 36px;
+  font-size: 13px;
+  color: #c8941a;
+  font-weight: 700;
+  width: 38px;
   text-align: right;
 }
 
-/* ── Three columns ── */
+/* ══════════════════════════════════════════
+   THREE COLUMNS
+══════════════════════════════════════════ */
 .localink__three-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -362,42 +437,47 @@
 
 .localink__three-cols h4 {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-heading);
   margin-bottom: 8px;
 }
 
 .localink__three-cols p {
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 0;
 }
 
-/* ── Colour palette swatches ── */
-.localink__palette {
+/* ══════════════════════════════════════════
+   COLLECTIONS – large colour grid
+══════════════════════════════════════════ */
+.localink__palette-grid {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.localink__palette-row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 16px;
 }
 
 .localink__swatch {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.07);
+  flex-shrink: 0;
 }
 
-.localink__swatch--lg {
-  width: 64px;
-  height: 64px;
-}
-
-/* ── Typography specimens ── */
+/* ══════════════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════════════ */
 .localink__typography {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
   margin-top: 16px;
 }
 
@@ -408,23 +488,34 @@
 
 .localink__type-h1 {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 52px;
   color: var(--text-heading);
 }
 
 .localink__type-body {
   font-family: var(--font-body);
-  font-size: 40px;
+  font-size: 44px;
   color: var(--text-body);
+}
+
+.localink__type-sub {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 4px;
 }
 
 .localink__type-label {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-/* ── Sitemap ── */
+/* ══════════════════════════════════════════
+   SITEMAP
+══════════════════════════════════════════ */
 .localink__sitemap {
   margin-top: 24px;
   display: flex;
@@ -434,30 +525,32 @@
 }
 
 .localink__sitemap-root {
-  background: #3d1a3d;
+  background: #4a1040;
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 16px;
-  padding: 10px 28px;
+  font-size: 15px;
+  padding: 10px 32px;
   border-radius: 8px;
 }
 
 .localink__sitemap-branches {
   display: flex;
-  gap: 16px;
+  gap: 12px;
 }
 
 .localink__sitemap-node {
-  background: #eddeed;
-  color: #3d1a3d;
+  background: #e5cce4;
+  color: #4a1040;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   padding: 8px 20px;
   border-radius: 8px;
   font-weight: 500;
 }
 
-/* ── Image pair ── */
+/* ══════════════════════════════════════════
+   IMAGE PAIR
+══════════════════════════════════════════ */
 .localink__image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -470,42 +563,139 @@
   border-radius: 12px;
 }
 
-/* ── Moodboard ── */
+/* ══════════════════════════════════════════
+   MOODBOARD – 2-col × 3-row with purple overlay
+══════════════════════════════════════════ */
+.localink__moodboard-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 48px;
+  align-items: start;
+}
+
 .localink__moodboard {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
-.localink__moodboard img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.localink__moodboard-cell {
+  position: relative;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-/* ── Insights list ── */
-.localink__insights-list {
-  margin: 12px 0 24px 20px;
+.localink__moodboard-cell img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.6) brightness(0.85);
 }
 
-.localink__insights-list li {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-body);
-  line-height: 1.8;
+.localink__moodboard-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 16, 64, 0.38);
+  mix-blend-mode: multiply;
+}
+
+/* ══════════════════════════════════════════
+   B/W TYPOGRAPHY
+══════════════════════════════════════════ */
+.localink__bw-type {
+  margin-top: 16px;
+  padding: 24px 28px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #e8e5de;
+}
+
+.localink__bw-h1 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: #111;
   margin-bottom: 6px;
 }
 
-/* ── Full-width image ── */
+.localink__bw-h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.localink__bw-body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #555;
+}
+
+/* ══════════════════════════════════════════
+   GRAPHIC STYLING – horizontal brand palette
+══════════════════════════════════════════ */
+.localink__graphic-palette {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.localink__graphic-swatch {
+  flex: 1;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+/* ══════════════════════════════════════════
+   KEY INSIGHTS – screenshot + text rows
+══════════════════════════════════════════ */
+.localink__insight-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #ede9e0;
+}
+
+.localink__insight-row:last-child {
+  border-bottom: none;
+}
+
+.localink__insight-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.localink__insight-text h4 {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+
+.localink__insight-text p {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.85;
+}
+
+/* ══════════════════════════════════════════
+   FULL-WIDTH IMAGE
+══════════════════════════════════════════ */
 .localink__full-img {
   width: 100%;
   border-radius: 12px;
   margin-top: 16px;
 }
 
-/* ── Contact ── */
+/* ══════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════ */
 .localink__contact {
   text-align: center;
   padding: 40px 0 20px;
@@ -521,16 +711,18 @@
 .localink__contact a {
   font-family: var(--font-body);
   font-size: 15px;
-  color: #6b2d6b;
+  color: #4a1040;
   text-decoration: underline;
 }
 
-/* ── Back button ── */
+/* ══════════════════════════════════════════
+   BACK BUTTON
+══════════════════════════════════════════ */
 .localink__back-btn {
   display: block;
   margin: 0 auto 60px;
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-heading);
   background: transparent;
   border: 1.5px solid var(--text-heading);
@@ -545,77 +737,45 @@
   color: var(--bg-primary);
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 960px) {
   .localink__hero {
     grid-template-columns: 1fr;
     padding: 48px 32px;
     text-align: center;
   }
 
+  .localink__hero-images { height: 240px; }
+
   .localink__info-bar {
     grid-template-columns: repeat(2, 1fr);
-    padding: 32px;
+    padding: 28px 32px;
   }
 
   .localink__about,
-  .localink__task {
+  .localink__goals-row,
+  .localink__task,
+  .localink__comp-wrap,
+  .localink__findings-wrap,
+  .localink__moodboard-wrap {
     grid-template-columns: 1fr;
   }
 
-  .localink__task--reverse {
-    direction: ltr;
-  }
-
-  .localink__three-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .localink__typography {
-    grid-template-columns: 1fr;
-  }
-
-  .localink__image-pair {
-    grid-template-columns: 1fr;
-  }
-
-  .localink__moodboard {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .localink__finding-bar-track {
-    width: 160px;
-  }
+  .localink__three-cols { grid-template-columns: 1fr; }
+  .localink__typography  { grid-template-columns: 1fr; }
+  .localink__image-pair  { grid-template-columns: 1fr; }
+  .localink__insight-row { grid-template-columns: 1fr; }
+  .localink__comp-cards  { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-  .localink__hero {
-    padding: 40px 20px;
-  }
-
-  .localink__hero-title {
-    font-size: 40px;
-  }
-
-  .localink__info-bar {
-    grid-template-columns: 1fr 1fr;
-    padding: 24px 20px;
-  }
-
-  .localink__content {
-    padding: 40px 20px 60px;
-  }
-
-  .localink__comparison-table {
-    font-size: 13px;
-    overflow-x: auto;
-  }
-
-  .localink__moodboard {
-    grid-template-columns: 1fr;
-  }
-
-  .localink__process-line {
-    min-width: 30px;
-  }
+  .localink__hero-title { font-size: 40px; }
+  .localink__info-bar   { grid-template-columns: 1fr 1fr; padding: 20px; }
+  .localink__content    { padding: 40px 20px 60px; }
+  .localink__moodboard  { grid-template-columns: 1fr; }
+  .localink__process-line { min-width: 32px; }
+  .localink__finding-label { min-width: 140px; }
+  .localink__finding-bar-track { display: none; }
 }
