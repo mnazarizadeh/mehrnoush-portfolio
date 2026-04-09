@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Projects.css';
 
 const LOCALINK_IMG_1 = 'https://uxfolio-prod.s3.us-east-1.amazonaws.com/67a11ba89d5a5b2b9f1c9ec1/687fb213c22e974568d74e0b/vjpZCTBGZNG9mLSY.webp';
@@ -33,10 +34,20 @@ const projects = [
 function Projects() {
   const [visible, setVisible] = useState(false);
   const [expandedProject, setExpandedProject] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     setVisible(true);
-  }, []);
+
+    const scrollTo = location.state?.scrollTo;
+    if (scrollTo) {
+      setExpandedProject(scrollTo);
+      setTimeout(() => {
+        const el = document.getElementById(scrollTo);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location.state]);
 
   const toggleProject = (id) => {
     setExpandedProject(expandedProject === id ? null : id);
@@ -49,7 +60,7 @@ function Projects() {
 
         <div className="projects__list">
           {projects.map((project) => (
-            <div key={project.id} className="project-detail">
+            <div key={project.id} id={project.id} className="project-detail">
               <div className="project-detail__header">
                 <div className="project-detail__image-wrapper">
                   <img

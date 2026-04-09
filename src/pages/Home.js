@@ -39,7 +39,7 @@ function Home() {
       <section className="projects-section">
         <h2 className="projects-section__title">Projects</h2>
         <div className="projects-grid">
-          <Link to="/projects" className="project-card">
+          <Link to="/projects" state={{ scrollTo: 'localink' }} className="project-card">
             <div className="project-card__image-container">
               <img
                 src={LOCALINK_IMG}
@@ -53,7 +53,7 @@ function Home() {
             </div>
           </Link>
 
-          <Link to="/projects" className="project-card">
+          <Link to="/projects" state={{ scrollTo: 'dallas-flower' }} className="project-card">
             <div className="project-card__image-container">
               <img
                 src={DALLAS_IMG}
