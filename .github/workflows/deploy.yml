@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          PUBLIC_URL: /mehrnoush-portfolio
+          PUBLIC_URL: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
